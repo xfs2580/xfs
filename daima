@@ -1,0 +1,16 @@
+answer = 49
+left = 0
+right = 100
+while True:
+    guess = int(input("输入一个数字,范围：%d ~ %d:" % (left, right)))
+
+    if answer == guess:
+        print("回答正确", answer)
+        break
+
+    if answer > guess:
+        print("猜小了，往小的猜")
+        left = guess
+    else:
+        print("猜大了，往大得猜")
+        right = guess
